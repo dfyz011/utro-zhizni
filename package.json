@@ -1,16 +1,17 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^4.6.2",
-    "sharp": "^0.33.3"
-  }
+	"name": "",
+	"type": "module",
+	"version": "0.0.1",
+	"packageManager": "pnpm@9.0.2",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^4.6.2",
+		"sharp": "^0.33.3"
+	}
 }
