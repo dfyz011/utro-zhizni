@@ -9,13 +9,24 @@ const backgroundImage = await getImage({ src: myBackground });
 const backgroundImageUrl = `url('${backgroundImage.src}')`;
 ---
 
-<div class="site">
-	<div class="opacity-overlay"></div>
-	<Navigation />
-	<div class="page">
-		<slot />
-	</div>
-</div>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<slot name="head" />
+	</head>
+	<body>
+		<div class="site">
+			<div class="opacity-overlay"></div>
+			<Navigation />
+			<div class="page">
+				<slot />
+			</div>
+		</div>
+	</body>
+</html>
 
 <style define:vars={{ backgroundImageUrl }}>
 	.site {
