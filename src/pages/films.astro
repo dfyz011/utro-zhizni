@@ -1,31 +1,5 @@
 ---
-import Film from "../components/Film.astro";
-import Layout from "../layouts/Layout.astro";
-import { FILMS_WITH_MEDIA } from "../data/films";
+import FilmsPage from "../components/FilmsPage.astro";
 ---
 
-<Layout>
-	<div class="films-container">
-		{
-			FILMS_WITH_MEDIA.map((film) => {
-				return (
-					<Film
-						href={`/utro-zhizni/films/${film.name}`}
-						imgUrl={film.previewImgUrl}
-						gifUrl={film.gifUrl}
-					/>
-				);
-			})
-		}
-	</div>
-</Layout>
-<style>
-	.films-container {
-		display: grid;
-		grid-template-columns: repeat(3, auto);
-		grid-auto-rows: max-content;
-		gap: 16px;
-		padding: 16px;
-		justify-content: space-evenly;
-	}
-</style>
+<FilmsPage />

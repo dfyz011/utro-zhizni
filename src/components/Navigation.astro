@@ -1,29 +1,33 @@
 ---
-function removeExtension(pathname) {
+function clearPathname(pathname) {
 	const lastDotIndex = pathname.lastIndexOf(".");
 	if (lastDotIndex !== -1) {
 		return pathname.substring(0, lastDotIndex);
+	}
+	if (pathname[pathname.length - 1] === "/") {
+		return pathname.substring(0, pathname.length - 1);
 	}
 	return pathname;
 }
 
 const pathname = new URL(Astro.request.url).pathname;
-const cleanPathname = removeExtension(pathname);
+const cleanPathname = clearPathname(pathname);
+console.log(cleanPathname);
 ---
 
 <nav>
 	<ul>
 		<li>
 			<a
-				class={["/utro-zhizni/about", "/utro-zhizni"].includes(cleanPathname)
-					? "active"
-					: ""}
+				class={"/utro-zhizni/about" === cleanPathname ? "active" : ""}
 				href="/utro-zhizni/about">About</a
 			>
 		</li>
 		<li>
 			<a
-				class={"/utro-zhizni/films" === cleanPathname ? "active" : ""}
+				class={["/utro-zhizni/films", "/utro-zhizni"].includes(cleanPathname)
+					? "active"
+					: ""}
 				href="/utro-zhizni/films">Films</a
 			>
 		</li>
