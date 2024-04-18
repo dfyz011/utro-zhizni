@@ -1,13 +1,12 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <nav>
 	<ul>
 		<li>
 			<a
-				class={["utro-zhizni/about", "utro-zhizni/"].includes(currentPath)
+				class={["/utro-zhizni/about", "/utro-zhizni"].includes(pathname)
 					? "active"
 					: ""}
 				href="/utro-zhizni/about">About</a
@@ -15,13 +14,13 @@ const currentPath = pathname.slice(1); // remove the first "/"
 		</li>
 		<li>
 			<a
-				class={"utro-zhizni/films" === currentPath ? "active" : ""}
+				class={"/utro-zhizni/films" === pathname ? "active" : ""}
 				href="/utro-zhizni/films">Films</a
 			>
 		</li>
 		<li>
 			<a
-				class={"utro-zhizni/contacts" === currentPath ? "active" : ""}
+				class={"/utro-zhizni/contacts" === pathname ? "active" : ""}
 				href="/utro-zhizni/contacts"
 			>
 				Contacts
