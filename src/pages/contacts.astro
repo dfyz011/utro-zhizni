@@ -1,7 +1,71 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  Contacts
+	<div class="page">
+		<div class="contacts">
+			<h1>Contact</h1>
+			<div>
+				<p>
+					<a href="mailto:utrozhizni63@gmail.com">utrozhizni63@gmail.com</a>
+				</p>
+				<p>telegram: <a href="https://t.me/utrozhizni">utrozhizni</a></p>
+				<p>
+					whats app: <a href="https://wa.me/"></a>
+				</p>
+				<p><a href="tel:">tel:</a></p>
+			</div>
+			<div class="icons-part">
+				<a href="https://www.instagram.com/utrozhizni/"
+					><img class="icon" src="/social-icons/inst.png" /></a
+				>
+				<a href="https://www.instagram.com/utrozhizni/"
+					><img class="icon" src="/social-icons/youtube.png" /></a
+				>
+				<a href="https://wa.me/"
+					><img class="icon" src="/social-icons/wa.png" /></a
+				>
+			</div>
+		</div>
+		<img class="avatar" src="/avatar.png" />
+	</div>
 </Layout>
+
+<style>
+	.page {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		padding: 20px;
+	}
+	.contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.text-part {
+	}
+	.icons-part {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+	}
+	h1 {
+		color: white;
+	}
+	p {
+		color: white;
+	}
+	a {
+		color: inherit; /* blue colors for links too */
+		text-decoration: inherit; /* no underline */
+	}
+	.icon {
+		width: 32px;
+		height: 32px;
+		object-fit: cover;
+	}
+	.avatar {
+		border-radius: 50%;
+	}
+</style>
