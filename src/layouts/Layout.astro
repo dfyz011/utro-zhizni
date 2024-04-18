@@ -9,20 +9,36 @@ const backgroundImage = await getImage({ src: myBackground });
 const backgroundImageUrl = `url('${backgroundImage.src}')`;
 ---
 
-<div class="page">
-	<Navigation />
+<div class="site">
 	<div class="opacity-overlay"></div>
-	<slot />
+	<div class="page">
+		<Navigation />
+		<slot />
+	</div>
 </div>
 
 <style define:vars={{ backgroundImageUrl }}>
-	.page {
+	.site {
 		background-image: var(--backgroundImageUrl);
+		overflow: hidden;
 		height: 100%;
-		overflow-x: hidden;
-		overflow-y: auto;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
+	}
+	.page {
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: relative;
+	}
+	.opacity-overlay {
+		background-color: #000000;
+		opacity: 80%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
 	}
 </style>
