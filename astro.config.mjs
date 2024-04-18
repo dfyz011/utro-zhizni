@@ -4,5 +4,10 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	site: "https://dfyz011.github.io/utro-zhizni",
 	outDir: "./docs", // Output to 'docs' folder, which GitHub Pages can use
-	base: "/utro-zhizni/", // Adjust the base path if necessary
+	base: "/utro-zhizni", // Adjust the base path if necessary
+	trailingSlash: "ignore",
+	build: {
+		// Example: Generate `page.html` instead of `page/index.html` during build.
+		format: "file",
+	},
 });

@@ -40,7 +40,7 @@ export const FILMS = [
 export const FILMS_WITH_MEDIA = FILMS.map((film) => {
 	return {
 		...film,
-		previewImgUrl: `${film.name}/preview.jpg`,
-		gifUrl: `${film.name}/gif.gif`,
+		previewImgUrl: `/utro-zhizni/${film.name}/preview.jpg`,
+		gifUrl: `/utro-zhizni/${film.name}/gif.gif`,
 	};
 });
