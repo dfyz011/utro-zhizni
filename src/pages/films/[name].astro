@@ -1,0 +1,24 @@
+---
+import { FILMS_WITH_MEDIA } from "../../data/films";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+	return FILMS_WITH_MEDIA.map((film) => ({
+		params: { name: film.name },
+		props: { film },
+	}));
+}
+
+const { film } = Astro.props;
+---
+
+<Layout>
+	<!-- TODO: или тут видео? -->
+	<img src={film.imgUrl} />
+	<h1>
+		{film.title}
+	</h1>
+	<span>
+		{film.text}
+	</span>
+</Layout>
