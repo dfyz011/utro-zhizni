@@ -4,13 +4,8 @@ html {
 }
 
 body {
+  overflow: hidden;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-image: url("/utro-zhizni/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .opacity-overlay {
