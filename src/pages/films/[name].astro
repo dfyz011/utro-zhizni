@@ -14,7 +14,13 @@ const { film } = Astro.props;
 
 <Layout>
 	<!-- TODO: или тут видео? -->
-	<img src={film.imgUrl} />
+	<!-- <img src={film.imgUrl} /> -->
+	<iframe
+		src={`${film.videoUrl}`}
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen></iframe>
 	<h1>
 		{film.title}
 	</h1>
@@ -22,3 +28,16 @@ const { film } = Astro.props;
 		{film.text}
 	</span>
 </Layout>
+
+<style>
+	iframe {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+	}
+	h1 {
+		color: white;
+	}
+	span {
+		color: white;
+	}
+</style>
