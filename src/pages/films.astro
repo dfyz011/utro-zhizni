@@ -1,7 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Film from "../components/Film.astro";
+import Layout from "../layouts/Layout.astro";
+import { FILMS_WITH_MEDIA } from "../data/films";
 ---
 
 <Layout>
-  Films
+	<div class="films-container">
+		{
+			FILMS_WITH_MEDIA.map((film) => {
+				return (
+					<Film
+						href={`/${film.name}`}
+						imgUrl={film.previewImgUrl}
+						gifUrl={film.gifUrl}
+					/>
+				);
+			})
+		}
+	</div>
 </Layout>
+<style>
+	.films-container {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-auto-rows: max-content;
+		gap: 16px;
+		padding: 16px;
+		justify-content: space-evenly;
+	}
+</style>

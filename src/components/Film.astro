@@ -1,0 +1,26 @@
+---
+interface Props {
+	href: string;
+	imgUrl: string;
+	gifUrl: string;
+}
+
+const { href, imgUrl, gifUrl } = Astro.props;
+---
+
+<div class="film">
+	<a href={href}>
+		<img src={imgUrl} />
+	</a>
+</div>
+<style>
+	.film {
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent-light));
+	}
+</style>
