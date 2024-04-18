@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
 	const films = await getCollection("films");
 	return films.map((film) => ({
-		params: { name: film.slug },
+		params: { name: film.slug.split("/")[1] },
 		props: { film: film.data },
 	}));
 }
