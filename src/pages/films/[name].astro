@@ -1,11 +1,12 @@
 ---
-import { FILMS_WITH_MEDIA } from "../../data/films";
 import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-export function getStaticPaths() {
-	return FILMS_WITH_MEDIA.map((film) => ({
-		params: { name: film.name },
-		props: { film },
+export async function getStaticPaths() {
+	const films = await getCollection("films");
+	return films.map((film) => ({
+		params: { name: film.slug },
+		props: { film: film.data },
 	}));
 }
 
@@ -13,8 +14,6 @@ const { film } = Astro.props;
 ---
 
 <Layout>
-	<!-- TODO: или тут видео? -->
-	<!-- <img src={film.imgUrl} /> -->
 	<iframe
 		src={`${film.videoUrl}`}
 		frameborder="0"

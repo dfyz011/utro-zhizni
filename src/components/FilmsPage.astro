@@ -1,18 +1,20 @@
 ---
 import Film from "./Film.astro";
 import Layout from "../layouts/Layout.astro";
-import { FILMS_WITH_MEDIA } from "../data/films";
+import { getCollection } from "astro:content";
+
+const films = await getCollection("films");
 ---
 
 <Layout>
 	<div class="films-container">
 		{
-			FILMS_WITH_MEDIA.map((film) => {
+			films.map((film) => {
 				return (
 					<Film
-						href={`/utro-zhizni/films/${film.name}`}
-						imgUrl={film.previewImgUrl}
-						gifUrl={film.gifUrl}
+						href={`/utro-zhizni/films/${film.slug}`}
+						img={film.data.previewImg}
+						gifUrl={film.data.gifUrl}
 					/>
 				);
 			})

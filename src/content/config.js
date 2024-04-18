@@ -6,7 +6,7 @@ const filmsCollectioon = defineCollection({
 			videoUrl: z.string(),
 			title: z.string(),
 			text: z.string(),
-			previewImgUrl: image(),
+			previewImg: image(),
 			gifUrl: z.string(),
 		}),
 });

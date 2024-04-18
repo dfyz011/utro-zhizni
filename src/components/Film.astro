@@ -1,16 +1,25 @@
 ---
+import type { GetImageResult, ImageInputFormat, ImageMetadata } from "astro";
+import { Image, type LocalImageProps } from "astro:assets";
 interface Props {
 	href: string;
-	imgUrl: string;
+	img: Partial<ImageMetadata>;
 	gifUrl: string;
 }
 
-const { href, imgUrl, gifUrl } = Astro.props;
+const { href, img, gifUrl } = Astro.props;
 ---
 
 <div class="film">
 	<a href={href}>
-		<img class="image" src={imgUrl} />
+		<Image
+			class="image"
+			alt={href}
+			src={img.src}
+			width={img.width}
+			height={img.height}
+			format={img.format}
+		/>
 	</a>
 </div>
 <style>
