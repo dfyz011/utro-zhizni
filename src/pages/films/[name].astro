@@ -6,26 +6,24 @@ export async function getStaticPaths() {
 	const films = await getCollection("films");
 	return films.map((film) => ({
 		params: { name: film.slug.split("/")[1] },
-		props: { film: film.data },
+		props: { film: film.data, render: film.render },
 	}));
 }
 
-const { film } = Astro.props;
+const { film, render } = Astro.props;
+const { Content } = await render();
 ---
 
 <Layout>
-	<iframe
-		src={`${film.videoUrl}`}
-		frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-		referrerpolicy="strict-origin-when-cross-origin"
-		allowfullscreen></iframe>
-	<h1>
-		{film.title}
-	</h1>
-	<span>
-		{film.text}
-	</span>
+	<div class="container">
+		<iframe
+			src={`${film.videoUrl}`}
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen></iframe>
+		<Content />
+	</div>
 </Layout>
 
 <style>
@@ -33,10 +31,8 @@ const { film } = Astro.props;
 		width: 100%;
 		aspect-ratio: 16 / 9;
 	}
-	h1 {
+	.container {
 		color: white;
 	}
-	span {
-		color: white;
-	}
+	/* TODO: настроить стили для маркдауна */
 </style>
