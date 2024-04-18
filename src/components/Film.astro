@@ -10,11 +10,15 @@ const { href, imgUrl, gifUrl } = Astro.props;
 
 <div class="film">
 	<a href={href}>
-		<img src={imgUrl} />
+		<img class="image" src={imgUrl} />
 	</a>
 </div>
 <style>
 	.film {
+	}
+	.film .image {
+		height: 100%;
+		object-fit: cover;
 	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
