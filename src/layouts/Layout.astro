@@ -11,8 +11,8 @@ const backgroundImageUrl = `url('${backgroundImage.src}')`;
 
 <div class="site">
 	<div class="opacity-overlay"></div>
+	<Navigation />
 	<div class="page">
-		<Navigation />
 		<slot />
 	</div>
 </div>
@@ -25,12 +25,16 @@ const backgroundImageUrl = `url('${backgroundImage.src}')`;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
+		display: flex;
+		flex-direction: column;
 	}
 	.page {
 		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
 		position: relative;
+		padding: 48px;
+		flex-grow: 1;
 	}
 	.opacity-overlay {
 		background-color: #000000;

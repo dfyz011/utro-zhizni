@@ -39,11 +39,15 @@ import avatarImage from "../images/avatar.png";
 
 <style>
 	.page {
+		height: 100%;
 		display: grid;
 		grid-template-columns: 50% 50%;
-		padding: 20px;
+		grid-auto-rows: min-content;
+		align-items: center;
+		align-content: center;
 	}
 	.contacts {
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -72,5 +76,6 @@ import avatarImage from "../images/avatar.png";
 	}
 	.avatar {
 		border-radius: 50%;
+		height: unset;
 	}
 </style>
