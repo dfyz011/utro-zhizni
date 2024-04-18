@@ -1,5 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import waImage from "../images/social-icons/wa.png";
+import youtubeImage from "../images/social-icons/youtube.png";
+import instImage from "../images/social-icons/inst.png";
+import avatarImage from "../images/avatar.png";
 ---
 
 <Layout>
@@ -18,17 +23,17 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 			<div class="icons-part">
 				<a href="https://www.instagram.com/utrozhizni/"
-					><img class="icon" src="/utro-zhizni/social-icons/inst.png" /></a
+					><Image alt="instagram" class="icon" src={instImage} /></a
 				>
 				<a href="https://www.instagram.com/utrozhizni/"
-					><img class="icon" src="/utro-zhizni/social-icons/youtube.png" /></a
+					><Image alt="youtube" class="icon" src={youtubeImage} /></a
 				>
 				<a href="https://wa.me/"
-					><img class="icon" src="/utro-zhizni/social-icons/wa.png" /></a
+					><Image alt="whatsapp" class="icon" src={waImage} /></a
 				>
 			</div>
 		</div>
-		<img class="avatar" src="/utro-zhizni/avatar.png" />
+		<Image alt="avatar" class="avatar" src={avatarImage} />
 	</div>
 </Layout>
 
