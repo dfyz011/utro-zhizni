@@ -26,7 +26,14 @@ const films = await getCollection("films");
 		display: grid;
 		grid-template-columns: repeat(3, auto);
 		grid-auto-rows: max-content;
-		gap: 16px;
+		gap: 20px;
 		justify-content: space-evenly;
+		@media screen and (max-width: 960px) {
+			grid-template-columns: repeat(2, auto);
+		}
+		@media screen and (max-width: 640px) {
+			grid-template-columns: auto;
+			gap: 16px;
+		}
 	}
 </style>

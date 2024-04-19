@@ -45,8 +45,11 @@ const backgroundImageUrl = `url('${backgroundImage.src}')`;
 		overflow-x: hidden;
 		overflow-y: auto;
 		position: relative;
-		padding: 48px;
+		padding: 16px 48px;
 		flex-grow: 1;
+		@media screen and (max-width: 640px) {
+			padding: 16px 32px;
+		}
 	}
 	.opacity-overlay {
 		background-color: #000000;
