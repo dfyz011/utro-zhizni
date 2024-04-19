@@ -4,17 +4,45 @@ import { Image } from "astro:assets";
 interface Props {
 	href: string;
 	img: ImageMetadata;
-	gifUrl: string;
+	trailerGif?: ImageMetadata;
 }
 
-const { href, img, gifUrl } = Astro.props;
+const { href, img, trailerGif } = Astro.props;
 ---
 
 <div class="film">
 	<a href={href}>
+		<!-- TODO: можно сделать оптимизацию под разные ширины -->
+		<!-- Можно оптимизировать заггрузку шрифта -->
+		<!-- настроить на сервере кэш -->
 		<Image class="static-image" loading="lazy" alt={href} src={img} />
+		<!-- <Image
+			class="animated-image"
+			loading="lazy"
+			alt={href}
+			src={trailerGif}
+			quality={5}
+		/> -->
+		<div></div>
 	</a>
 </div>
+
+<script>
+	const containers = document.querySelectorAll(`.film`);
+
+	containers.forEach((container) => {
+		const animatedImg = container.querySelector<HTMLElement>(".animated-image");
+		container.addEventListener("mouseenter", function () {
+			console.log("mousenter");
+			animatedImg.style.visibility = "visible";
+		});
+		container.addEventListener("mouseleave", function () {
+			console.log("mouseleave");
+			animatedImg.style.visibility = "hidden";
+		});
+	});
+</script>
+
 <style>
 	.film {
 		position: relative;
@@ -24,5 +52,15 @@ const { href, img, gifUrl } = Astro.props;
 		object-fit: cover;
 		transition: opacity 0.3s ease;
 	}
+
+	.animated-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		visibility: hidden;
+		object-fit: cover;
+		transition: opacity 0.3s ease;
 	}
 </style>

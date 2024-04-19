@@ -14,7 +14,7 @@ const films = await getCollection("films");
 					<Film
 						href={`/utro-zhizni/films/${film.slug.split("/")[1]}`}
 						img={film.data.previewImg as ImageMetadata}
-						gifUrl={film.data.gifUrl}
+						trailerGif={film.data.trailerGif as ImageMetadata}
 					/>
 				);
 			})

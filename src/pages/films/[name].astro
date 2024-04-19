@@ -18,7 +18,9 @@ const { Content } = await render();
 <Layout>
 	<div class="container">
 		<YouTube id={film.youtubeVideoId} posterQuality="max" class="yt-player" />
-		<Content />
+		<div class="content">
+			<Content />
+		</div>
 	</div>
 </Layout>
 
@@ -28,6 +30,9 @@ const { Content } = await render();
 		aspect-ratio: 16 / 9;
 		max-width: unset;
 	}
+	.content {
+		padding-top: 20px;
+	}
 	.container {
 		color: white;
 		padding:;
@@ -35,15 +40,21 @@ const { Content } = await render();
 			padding: 0 24px;
 		}
 
-		font-size: 14px;
-		@media screen and (max-width: 640px) {
-			font-size: 12px;
-		}
-
 		h1 {
-			font-size: 18px;
+			font-size: 21px;
+			font-weight: 300;
+			@media screen and (max-width: 640px) {
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+		p {
+			font-size: 17px;
+			line-height: 22px;
+			padding-bottom: 20px;
 			@media screen and (max-width: 640px) {
 				font-size: 16px;
+				line-height: 21px;
 			}
 		}
 	}

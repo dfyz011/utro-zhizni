@@ -1,62 +1,19 @@
 ---
 youtubeVideoId: W593Yn9aMMM
 title: LONG TITLE
-text: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+text: a
 previewImg: "./preview.jpg"
-gifUrl: Required
+trailerGif: "./trailer.gif"
 ---
 
-# Astro Starter Kit: Basics
+# ocean of childhood
 
-```sh
-npm create astro@latest -- --template basics
-```
+It was early morning, the rain was filling the recesses of the ocean's bare gums. It was intensifying, by now my friends had taken shelter from the rain, and I, slipping my already soaked shirt over my head, continued to observe what was happening around me. I was amazed at the beauty and vibrancy of the pools that appeared at dawn. I was fortunate enough to watch an entire sea country wake up, nestled close to the beach, in an acid green forest of fabulous, tangled algae and coral.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+From afar I noticed a man walking in my direction, I couldn't make it out at first, but as he got closer I saw a fishing rod in his hands. I was so interested in everything that I followed him. I made my way along the already raging ocean, along the morning reef, skirting rocks, jumping over holes, stopping only to pick up another fossilized shell along the way. He stood by a huge boulder, pulled out his pre-prepared tackle, and with a broad sweep of his arm launched the antenna with the treat into the underwater realm. I could not tear my eyes away: the rock behind which he was sheltering from the waves was receiving the strong embrace of the water on all sides, so that I could imagine how great was the love of the elements.For a moment I could not keep my feet from the impending force, which naturally swept me off my feet, plunging me headfirst into the water on the one hand, and on the other into his distant but very tangible childhood, which I was able to touch with all the senses of my human being.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+He remembered his sister, with whom he had walked in the same place, at the same time, but in the far, far past. The water was noisier, more visible in its manifestations, but still the same, after a vast number of years and stories, he could watch life flow.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+I love catching moments of the vast, ocean-cleared eucalyptus reefs. Appreciating each story along with those who give them to me, showing and exposing them like a fully life-filled ocean this morning.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+It is with great love that I thank Denis Mironov for this music. You sound from the very depths of your heart and I hear the ocean through these melodies, dear friend.
