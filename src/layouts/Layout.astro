@@ -1,10 +1,10 @@
 ---
+import "@fontsource/pt-sans-narrow";
 import "../styles/global.css";
 import "../styles/reset.css";
 import Navigation from "../components/Navigation.astro";
 import { getImage } from "astro:assets";
 import myBackground from "../images/background.jpg";
-
 const backgroundImage = await getImage({ src: myBackground });
 const backgroundImageUrl = `url('${backgroundImage.src}')`;
 ---
@@ -38,6 +38,7 @@ const backgroundImageUrl = `url('${backgroundImage.src}')`;
 		background-size: cover;
 		display: flex;
 		flex-direction: column;
+		font-family: "PT Sans Narrow";
 	}
 	.page {
 		height: 100%;
