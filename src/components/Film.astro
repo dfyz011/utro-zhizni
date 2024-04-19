@@ -12,21 +12,17 @@ const { href, img, gifUrl } = Astro.props;
 
 <div class="film">
 	<a href={href}>
-		<Image class="image" alt={href} src={img} />
+		<Image class="static-image" loading="lazy" alt={href} src={img} />
 	</a>
 </div>
 <style>
 	.film {
+		position: relative;
 	}
-	.film .image {
+	.static-image {
 		height: 100%;
 		object-fit: cover;
+		transition: opacity 0.3s ease;
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
 	}
 </style>
