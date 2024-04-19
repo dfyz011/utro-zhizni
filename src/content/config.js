@@ -4,8 +4,6 @@ const filmsCollectioon = defineCollection({
 	schema: ({ image }) =>
 		z.object({
 			youtubeVideoId: z.string(),
-			title: z.string(),
-			text: z.string(),
 			previewImg: image(),
 			trailerGif: image(),
 		}),

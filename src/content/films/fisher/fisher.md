@@ -1,7 +1,5 @@
 ---
 youtubeVideoId: W593Yn9aMMM
-title: LONG TITLE
-text: a
 previewImg: "./preview.jpg"
 trailerGif: "./trailer.gif"
 ---
