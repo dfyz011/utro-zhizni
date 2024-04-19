@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import { YouTube } from "@astro-community/astro-embed-youtube";
 
 export async function getStaticPaths() {
 	const films = await getCollection("films");
@@ -16,20 +17,16 @@ const { Content } = await render();
 
 <Layout>
 	<div class="container">
-		<iframe
-			src={`${film.videoUrl}`}
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin"
-			allowfullscreen></iframe>
+		<YouTube id={film.youtubeVideoId} posterQuality="max" class="yt-player" />
 		<Content />
 	</div>
 </Layout>
 
 <style>
-	iframe {
+	.yt-player {
 		width: 100%;
 		aspect-ratio: 16 / 9;
+		max-width: unset;
 	}
 	.container {
 		color: white;

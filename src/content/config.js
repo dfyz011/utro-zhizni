@@ -3,7 +3,7 @@ const filmsCollectioon = defineCollection({
 	type: "content",
 	schema: ({ image }) =>
 		z.object({
-			videoUrl: z.string(),
+			youtubeVideoId: z.string(),
 			title: z.string(),
 			text: z.string(),
 			previewImg: image(),
