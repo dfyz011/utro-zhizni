@@ -17,24 +17,18 @@ const cleanPathname = clearPathname(pathname);
 <nav>
 	<ul>
 		<li>
-			<a
-				class={"/utro-zhizni/about" === cleanPathname ? "active" : ""}
-				href="/utro-zhizni/about">About</a
+			<a class={"/about" === cleanPathname ? "active" : ""} href="/about"
+				>About</a
 			>
 		</li>
 		<li>
 			<a
-				class={["/utro-zhizni/films", "/utro-zhizni"].includes(cleanPathname)
-					? "active"
-					: ""}
-				href="/utro-zhizni/films">Films</a
+				class={["/films", ""].includes(cleanPathname) ? "active" : ""}
+				href="/films">Films</a
 			>
 		</li>
 		<li>
-			<a
-				class={"/utro-zhizni/contacts" === cleanPathname ? "active" : ""}
-				href="/utro-zhizni/contacts"
-			>
+			<a class={"/contacts" === cleanPathname ? "active" : ""} href="/contacts">
 				Contacts
 			</a>
 		</li>
