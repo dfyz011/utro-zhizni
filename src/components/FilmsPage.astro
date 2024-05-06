@@ -10,11 +10,13 @@ const films = await getCollection("films");
 	<div class="films-container">
 		{
 			films.map((film) => {
+				const fileName = film.slug.split("/")[1];
 				return (
 					<Film
-						href={`/films/${film.slug.split("/")[1]}`}
+						href={`/films/${fileName}`}
 						img={film.data.previewImg as ImageMetadata}
 						trailerGif={film.data.trailerGif as ImageMetadata}
+						trailerVideo={`${fileName}-${film.data.trailerVideo}`}
 					/>
 				);
 			})

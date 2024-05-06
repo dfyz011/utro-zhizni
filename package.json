@@ -4,9 +4,9 @@
 	"version": "0.0.1",
 	"packageManager": "pnpm@9.0.1",
 	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
+		"dev": "./copy-videos.sh && astro dev",
+		"start": "./copy-videos.sh && astro dev",
+		"build": "./copy-videos.sh && astro build",
 		"preview": "astro preview",
 		"astro": "astro"
 	},

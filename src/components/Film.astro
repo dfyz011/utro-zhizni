@@ -5,17 +5,24 @@ interface Props {
 	href: string;
 	img: ImageMetadata;
 	trailerGif?: ImageMetadata;
+	trailerVideo?: string;
 }
 
-const { href, img, trailerGif } = Astro.props;
+const { href, img, trailerGif, trailerVideo } = Astro.props;
 ---
 
 <div class="film">
 	<a href={href}>
 		<!-- TODO: можно сделать оптимизацию под разные ширины -->
-		<!-- Можно оптимизировать заггрузку шрифта -->
+		<!-- Можно оптимизировать загрузку шрифта -->
 		<!-- настроить на сервере кэш -->
 		<Image class="static-image" loading="lazy" alt={href} src={img} />
+		<video class="animated-image" muted loop autoplay>
+			<source
+				src={`/${import.meta.env.PUBLIC_TRAILER_VIDEOS_PATH}/${trailerVideo}`}
+				type="video/mp4"
+			/>
+		</video>
 		<!-- <Image
 			class="animated-image"
 			loading="lazy"
