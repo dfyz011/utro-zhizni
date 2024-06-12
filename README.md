@@ -40,4 +40,10 @@ pnpm dev
 
 16. Нажми "Commit"
 
-17. Нажми "Sync changes"
+17. Нажми "Sync changes" - это отправить твои изменения на github
+
+18. Перейди по ссылка https://github.com/dfyz011/utro-zhizni/actions и проверь, что последнее изменение зеленое!
+
+19. Если что-то не так - напиши Ване
+
+20. Любуйся на https://utrozhizni.ru/
