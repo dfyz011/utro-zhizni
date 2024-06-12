@@ -77,6 +77,10 @@ const { href, img, trailerGif, trailerVideo } = Astro.props;
 		visibility: hidden;
 		object-fit: cover;
 		transition: opacity 0.3s ease;
+		controls: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 		@media (hover: none) {
 			visibility: visible;
 		}
