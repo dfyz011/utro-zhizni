@@ -12,3 +12,5 @@ parameter=$1
 cp -R src/content/filmTemplateFolder src/content/films/$parameter
 
 mv src/content/films/$parameter/filmTemplate.md src/content/films/$parameter/$parameter.md
+
+ echo "Все получилось! Смотри папку src/content/films/$parameter"
