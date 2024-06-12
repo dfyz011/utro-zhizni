@@ -5,7 +5,7 @@ const filmsCollectioon = defineCollection({
 		z.object({
 			youtubeVideoId: z.string(),
 			previewImg: image(),
-			trailerGif: image(),
+			trailerGif: image().optional(),
 			trailerVideo: z.string().optional(),
 		}),
 });
