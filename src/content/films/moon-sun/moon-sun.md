@@ -1,5 +1,5 @@
 ---
-youtubeVideoId: W593Yn9aMMM
+youtubeVideoId: /AtsXy8cZA94
 previewImg: "./preview.jpg"
 trailerGif: "./trailer.gif"
 trailerVideo: "video.mov"
