@@ -23,6 +23,40 @@ const films = await getCollection("films");
 		}
 	</div>
 </Layout>
+
+<script is:inline data-astro-rerun>
+	(function () {
+		console.log("RUN");
+		const containers = document.querySelectorAll(`.film`);
+		console.log("containers", containers);
+
+		containers.forEach((container) => {
+			try {
+				container.addEventListener("mouseenter", function () {
+					const animatedImg = container.querySelector(".animated-image");
+					console.log(animatedImg, container);
+					animatedImg.style.opacity = "1";
+				});
+				container.addEventListener("mouseleave", function () {
+					console.log("mouseleave");
+					const animatedImg = container.querySelector(".animated-image");
+					animatedImg.style.opacity = "0";
+				});
+				const animatedImg = container.querySelector(".animated-image");
+				animatedImg.muted = true; // Ensure the video is muted
+				animatedImg.autoplay = true; // Set autoplay to true
+				if (animatedImg.paused) {
+					animatedImg.play().catch((err) => {
+						console.error(err);
+					});
+				}
+			} catch (err) {
+				console.error(err);
+			}
+		});
+	})();
+</script>
+
 <style>
 	.films-container {
 		display: grid;

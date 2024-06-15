@@ -42,32 +42,6 @@ const { href, img, trailerGif, trailerVideo } = Astro.props;
 	</a>
 </div>
 
-<script>
-	const containers = document.querySelectorAll(`.film`);
-
-	containers.forEach((container) => {
-		try {
-			const animatedImg =
-				container.querySelector<HTMLVideoElement>(".animated-image");
-			container.addEventListener("mouseenter", function () {
-				console.log("mousenter");
-				animatedImg.style.visibility = "visible";
-			});
-			container.addEventListener("mouseleave", function () {
-				console.log("mouseleave");
-				animatedImg.style.visibility = "hidden";
-			});
-			animatedImg.muted = true; // Ensure the video is muted
-			animatedImg.autoplay = true; // Set autoplay to true
-			if (animatedImg.paused) {
-				animatedImg.play();
-			}
-		} catch (err) {
-			console.error(err);
-		}
-	});
-</script>
-
 <style>
 	.film {
 		position: relative;
@@ -84,15 +58,15 @@ const { href, img, trailerGif, trailerVideo } = Astro.props;
 		left: 0;
 		height: 100%;
 		width: 100%;
-		visibility: hidden;
+		opacity: 0;
 		object-fit: cover;
-		transition: opacity 0.3s ease;
+		transition: opacity 0.5s ease;
 		controls: none;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
 		@media (hover: none) {
-			visibility: visible;
+			opacity: 1;
 		}
 	}
 	.animated-image::-webkit-media-controls,

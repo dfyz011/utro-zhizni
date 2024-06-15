@@ -5,6 +5,9 @@ import "../styles/reset.css";
 import Navigation from "../components/Navigation.astro";
 import { getImage } from "astro:assets";
 import myBackground from "../images/background.jpg";
+import BackgroundAudio from "../components/BackgroundAudio.astro";
+import { ViewTransitions } from 'astro:transitions';
+
 const backgroundImage = await getImage({ src: myBackground });
 const backgroundImageUrl = `url('${backgroundImage.src}')`;
 ---
@@ -17,8 +20,10 @@ const backgroundImageUrl = `url('${backgroundImage.src}')`;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<slot name="head" />
+    <ViewTransitions />
 	</head>
 	<body>
+		<BackgroundAudio />
 		<div class="site">
 			<div class="opacity-overlay"></div>
 			<Navigation />
