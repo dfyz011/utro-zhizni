@@ -1,7 +1,7 @@
 ---
 youtubeVideoId: AtsXy8cZA94
 previewImg: "./preview.jpg"
-trailerVideo: "video.mov"
+trailerVideo: "video.mp4"
 ---
 
 # moon and sun

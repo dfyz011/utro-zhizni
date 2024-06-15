@@ -57,7 +57,8 @@ const { href, img, trailerGif, trailerVideo } = Astro.props;
 				console.log("mouseleave");
 				animatedImg.style.visibility = "hidden";
 			});
-			animatedImg.muted = true;
+			animatedImg.muted = true; // Ensure the video is muted
+			animatedImg.autoplay = true; // Set autoplay to true
 			if (animatedImg.paused) {
 				animatedImg.play();
 			}

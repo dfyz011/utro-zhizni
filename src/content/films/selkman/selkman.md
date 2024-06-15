@@ -1,7 +1,7 @@
 ---
 youtubeVideoId: MX_D2OK-OEU
 previewImg: "./preview.jpg"
-trailerVideo: "video.mov"
+trailerVideo: "video.mp4"
 ---
 
 # selkman

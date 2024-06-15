@@ -1,7 +1,7 @@
 ---
 youtubeVideoId: jBtMYvBqQzg
 previewImg: "./preview.jpg"
-trailerVideo: "video.mov"
+trailerVideo: "video.mp4"
 ---
 
 # Dashamahavidya
